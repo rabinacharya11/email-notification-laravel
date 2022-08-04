@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailNotificationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/send', [EmailNotificationController::class, 'sendEmailNotification']);
+
+Route::get('/email', [EmailNotificationController::class, 'email']);

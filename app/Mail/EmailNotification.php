@@ -30,10 +30,8 @@ class EmailNotification extends Mailable
      */
     public function build()
     {
-        return $this->
-        subject($this->emailData['subject'])->
-
-        view('view.name')->with(['data'=>$this->emailData]);
+        return $this->view('email.test')->with(['data'=>$this->emailData]);
     }
 }
+
 
